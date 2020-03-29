@@ -1,0 +1,9 @@
+@import url(./_logout/header__nav-main_logout.css);
+@import url(./_login/header__nav-main_login.css);
+
+.header__nav-main {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  text-decoration: none;
+}

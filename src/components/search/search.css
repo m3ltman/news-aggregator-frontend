@@ -1,0 +1,12 @@
+@import url(./__bar/search__bar.css);
+@import url(./__box/search__box.css);
+@import url(./__button/search__button.css);
+@import url(./__description/search__description.css);
+@import url(./__header/search__header.css);
+@import url(./__header-border/search__header-border.css);
+@import url(./__main-content/search__main-content.css);
+
+.search {
+  background-image: url('../../images/main-background.png');
+  padding-bottom: 75px;
+}

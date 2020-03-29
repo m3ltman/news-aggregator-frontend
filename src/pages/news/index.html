@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>news-aggregator</title>
+  <meta name="author" content="Дима Кошелев">
+  <meta name="description"
+    content="Сервис, который позволяет зарегистрированным пользователям получать и сохранять новости."
+  >
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.news.css %>">
+  <link rel="icon" href="../<%=require('../../images/favicon.png')%>">
+</head>
+<body>
+  <header class="header">
+    <p class="header__name">NewsExplorer</p>
+    <menu class="header__nav">
+      <li><a class="header__nav-main" href="#">Я страница с новостями, привет!</a></li>
+      <button type="button" class="button header__nav-button">LOGOUT</button>
+    </menu>
+  </header>
+  <a href="../">Вернуться на главную</a>
+  <script src="<%= htmlWebpackPlugin.files.chunks.news.entry %>"></script>
+</body>
+</html>

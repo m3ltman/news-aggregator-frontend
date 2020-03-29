@@ -1,0 +1,12 @@
+@import url(../vendor/fonts.css);
+@import url(./components/header/header.css);
+@import url(./components/button/button.css);
+@import url(./components/page/page.css);
+@import url(./components/search/search.css);
+@import url(./components/cards/cards.css);
+@import url(./components/news-card/news-card.css);
+
+html, body {
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,7 @@
+.search__main-content {
+  display: flex;
+  flex-direction: column;
+  width: 42%;
+  margin: 80px auto 0;
+  color: #FFF;
+}

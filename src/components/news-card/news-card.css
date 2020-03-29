@@ -1,0 +1,12 @@
+@import url(./__date/news-card__date.css);
+@import url(./__pic/news-card__pic.css);
+@import url(./__source/news-card__source.css);
+@import url(./__text/news-card__text.css);
+@import url(./__title/news-card__title.css);
+@import url(./__content-wrapper/news-card__content-wrapper.css);
+
+.news-card {
+  max-width: 400px;
+  border-radius: 16px;
+  background: #FFF;
+}

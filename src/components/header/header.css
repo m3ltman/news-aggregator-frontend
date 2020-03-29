@@ -1,0 +1,17 @@
+@import url(./__name/header__name.css);
+@import url(./__nav-button/header__nav-button.css);
+@import url(./__nav-main/header__nav-main.css);
+@import url(./__nav/header__nav.css);
+@import url(./_logout/header_logout.css);
+@import url(./_login/header_login.css);
+
+.header {
+  font-family: Roboto Slab, Arial, Helvetica, sans-serif;
+  min-height: 80px;
+  font-style: normal;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 85%;
+  margin: auto;
+}
