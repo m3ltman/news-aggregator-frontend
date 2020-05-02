@@ -7,18 +7,35 @@
   <meta name="description"
     content="Сервис, который позволяет зарегистрированным пользователям получать и сохранять новости."
   >
-  <link rel="stylesheet" href="../styles/news.cc9db79496e42515eccb.css?86a0fa68225e5b69d926">
+  <link rel="stylesheet" href="../styles/news.cc9db79496e42515eccb.css?fa11f0fbfe6bef1eb14f">
   <link rel="icon" href="../images/favicon.png">
 </head>
 <body>
-  <header class="header">
-    <p class="header__name">NewsExplorer</p>
-    <menu class="header__nav">
-      <li><a class="header__nav-main" href="#">Я страница с новостями, привет!</a></li>
-      <button type="button" class="button header__nav-button">LOGOUT</button>
-    </menu>
-  </header>
-  <a href="../">Вернуться на главную</a>
-  <script src="../scripts/news.9ae3ae9e3f52f82caf33.js?86a0fa68225e5b69d926"></script>
+  <main class="page">
+    <section class="search">
+      <header class="header">
+        <p class="header__title">NewsExplorer</p>
+        <menu class="header__nav">
+          <li><a class="link link_active" href="../">Главная</a></li>
+          <li><a class="link link_inactive" href="#">Сохранённые статьи</a></li>
+          <li>
+            <button type="button" class="button header__login-button">Грета
+              <img src="../images/logout.png">
+            </button>
+          </li>
+        </menu>
+      </header>
+      <div class="search__header-border"></div>
+      <div class="search__main-content">
+        <h1 class="search__header">Что в мире творится?</h1>
+        <p class="search__description">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</p>
+        <div class="search__box">
+          <input class="search__bar" type="search" placeholder="Введите тему новости">
+          <button type="button" class="button search__button">Искать</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="../scripts/news.9ae3ae9e3f52f82caf33.js?fa11f0fbfe6bef1eb14f"></script>
 </body>
 </html>

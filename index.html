@@ -7,17 +7,22 @@
   <meta name="description"
     content="Сервис, который позволяет зарегистрированным пользователям получать и сохранять новости."
   >
-  <link rel="stylesheet" href="styles/main.3a90b06f76c9e04b89ba.css">
+  <link rel="stylesheet" href="styles/main.e1af8744e9a6be7f6c0e.css">
   <link rel="icon" href="images/favicon.png">
 </head>
 <body>
   <main class="page">
     <section class="search">
-      <header class="header header_logout">
-        <p class="header__name">NewsExplorer</p>
+      <header class="header">
+        <p class="header__title">NewsExplorer</p>
         <menu class="header__nav">
-          <li><a class="header__nav-main header__nav-main_logout" href="#">Главная</a></li>
-          <button type="button" class="button header__nav-button">Авторизоваться</button>
+          <li><a class="link link_active" href="#">Главная</a></li>
+          <li><a class="link link_inactive" href="./news">Сохранённые статьи</a></li>
+          <li>
+            <button type="button" class="button header__login-button">Грета
+              <img src="images/logout.png">
+            </button>
+          </li>
         </menu>
       </header>
       <div class="search__header-border"></div>
@@ -33,29 +38,40 @@
     <section class="cards">
       <!-- В данной секции сверстал и применил стили для трёх состояний, на этапе JS сделаю их корректное отображение, пока просто закомментировал -->
 
-      <!-- <img class="cards__not-found-img" src="images/not-found_v1.svg">
+      <!-- Статьи не найдены -->
+
+      <!-- <img class="cards__not-found-img" src="images/not-found_v1.svg" alt="Карточки не найдены">
       <h2 class="cards__not-found-header">Ничего не найдено</h2>
       <p class="cards__not-found-desc">К сожалению по вашему запросу ничего не найдено.</p> -->
 
+      <!-- Прелоадер грузит данные -->
+
       <!-- <i class="cards__circle-preloader"></i>
       <p class="cards__circle-preloader-text">Идет поиск новостей...</p> -->
+
+      <!-- Карточки с новостями выводятся на экран -->
+
       <h2 class="cards__title">Результаты поиска</h2>
       <div class="cards__container">
         <div class="news-card">
           <img class="news-card__pic" src="images/image_08.png" alt="Картинка новости">
+          <img class="news-card__bookmark" src="images/bookmark-inactive.png" alt="Иконка закладки">
+          <img class="news-card__tooltip" src="images/tooltip.png" alt="Иконка подсказки">
           <div class="news-card__content-wrapper">
-            <time class="news-card__date">2 августа, 2019</time>
+            <time class="news-card__date" datetime="2019-08-02">2 августа, 2019</time>
             <h3 class="news-card__title">Национальное достояние – парки</h3>
-            <p class="news-card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
-              система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
+            <p class="news-card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система
+              национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
             </p>
             <p class="news-card__source">Лента.ру</p>
           </div>
         </div>
         <div class="news-card">
           <img class="news-card__pic" src="images/image_04.png" alt="Картинка новости">
+          <img class="news-card__bookmark" src="images/bookmark-marked.png" alt="Иконка закладки">
+          <!-- <img class="news-card__tooltip" src="images/tooltip.png" alt="Иконка подсказки"> -->
           <div class="news-card__content-wrapper">
-            <time class="news-card__date">2 августа, 2019</time>
+            <time class="news-card__date" datetime="2019-08-02">2 августа, 2019</time>
             <h3 class="news-card__title">Лесные огоньки: история одной фотографии</h3>
             <p class="news-card__text">Фотограф отвлеклась от освещения суровой политической реальности
               Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.
@@ -65,8 +81,10 @@
         </div>
         <div class="news-card">
           <img class="news-card__pic" src="images/image_07.png" alt="Картинка новости">
+          <img class="news-card__bookmark" src="images/bookmark-inactive.png" alt="Иконка закладки">
+          <img class="news-card__tooltip" src="images/tooltip.png" alt="Иконка подсказки">
           <div class="news-card__content-wrapper">
-            <time class="news-card__date">2 августа, 2019</time>
+            <time class="news-card__date" datetime="2019-08-02">2 августа, 2019</time>
             <h3 class="news-card__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
             <p class="news-card__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения.
               В этот раз он отправился в Двинско-Пинежскую тайгу, где...
@@ -74,22 +92,34 @@
             <p class="news-card__source">Риа</p>
           </div>
         </div>
-        <div class="news-card">
-          <img class="news-card__pic" src="images/image_08.png" alt="Картинка новости">
-          <div class="news-card__content-wrapper">
-            <time class="news-card__date">2 августа, 2019</time>
-            <h3 class="news-card__title">Национальное достояние – парки</h3>
-            <p class="news-card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
-              система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
-            </p>
-            <p class="news-card__source">Лента.ру</p>
-          </div>
-        </div>
       </div>
-
+      <button type="button" class="button news-card__show-button">Показать еще</button>
     </section>
+    <section class="about-author">
+      <picture>
 
+        <img class="about-author__pic" src="images/author.png" alt="Фотография автора сайта">
+      </picture>
+      <h2 class="about-author__header">Об авторе</h2>
+      <div class="about-author__content-wrapper">
+        <p class="about-author__desc">Это блок с описанием автора проекта.
+          Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.
+        </p>
+        <p class="about-author__desc">Также можно рассказать о процессе обучения в
+          Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.
+        </p>
+      </div>
+    </section>
+    <footer class="footer">
+      <p class="footer__copyright">&copy; 2020 Supersite, Powered by News API</p>
+      <nav class="footer__menu">
+        <a class="link footer__link" href="#" rel="noopener noreferrer">Главная</a>
+        <a class="link footer__link" href="https://praktikum.yandex.ru/" target="_blank" rel="noopener noreferrer">Яндекс.Практикум</a>
+        <a class="link footer__link" href="https://github.com/m3ltman?tab=repositories" target="_blank" rel="noopener noreferrer"><img src="images/github.png"></a>
+        <a class="link footer__link" href="https://vk.com/m3ltman" target="_blank" rel="noopener noreferrer"><img src="images/fb.png"></a>
+      </nav>
+    </footer>
   </main>
-  <script src="scripts/main.765f29aea01c7cb8b628.js"></script>
+  <script src="scripts/main.83c8bca1a5ad16e5cf99.js"></script>
 </body>
 </html>
