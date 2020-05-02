@@ -46,6 +46,28 @@ module.exports = {
           },
           {
             loader: 'image-webpack-loader',
+            options: {
+              mozjpeg: {
+                progressive: true,
+                quality: 65,
+              },
+              optipng: {
+                enabled: false,
+              },
+              svgo: {
+                enabled: true,
+              },
+              pngquant: {
+                quality: [0.85, 0.9],
+                speed: 4,
+              },
+              gifsicle: {
+                interlaced: false,
+              },
+              webp: {
+                quality: 85,
+              },
+            },
           },
         ],
       },
