@@ -4,38 +4,109 @@
   <meta charset="UTF-8">
   <title>news-aggregator</title>
   <meta name="author" content="Дима Кошелев">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description"
     content="Сервис, который позволяет зарегистрированным пользователям получать и сохранять новости."
   >
-  <link rel="stylesheet" href="../styles/news.cc9db79496e42515eccb.css?fa11f0fbfe6bef1eb14f">
+  <link rel="stylesheet" href="../styles/news.1f0e2238ecc699c51acb.css?930ab87672b1f08560d8">
   <link rel="icon" href="../images/favicon.png">
 </head>
 <body>
   <main class="page">
-    <section class="search">
-      <header class="header">
-        <p class="header__title">NewsExplorer</p>
-        <menu class="header__nav">
-          <li><a class="link link_active" href="../">Главная</a></li>
-          <li><a class="link link_inactive" href="#">Сохранённые статьи</a></li>
-          <li>
-            <button type="button" class="button header__login-button">Грета
-              <img src="../images/logout.png">
-            </button>
-          </li>
-        </menu>
-      </header>
-      <div class="search__header-border"></div>
-      <div class="search__main-content">
-        <h1 class="search__header">Что в мире творится?</h1>
-        <p class="search__description">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</p>
-        <div class="search__box">
-          <input class="search__bar" type="search" placeholder="Введите тему новости">
-          <button type="button" class="button search__button">Искать</button>
+    <header class="header header_color_dark">
+      <a class="header__title" href="../">NewsExplorer</a>
+      <menu class="header__nav">
+        <li><a class="link" href="../">Главная</a></li>
+        <li><a class="link link_active" href="#">Сохранённые статьи</a></li>
+        <li>
+          <button type="button" class="button header__button">Грета
+            <img src="../images/news-logout.png" alt="logout-icon">
+          </button>
+        </li>
+      </menu>
+      <img class="header__show-menu-btn" src="../images/header-news-mobile-menu.png" alt="mobile-menu">
+    </header>
+    <section class="saved-articles">
+      <h2 class="saved-articles__header">Сохранённые статьи</h2>
+      <p class="saved-articles__counter">Грета, у вас 5 сохранённых статей</p>
+      <p class="saved-articles__keywords">По ключевым словам: <b>Природа, Тайга</b> и <b>2 другим</b></p>
+    </section>
+    <section class="cards">
+      <div class="cards__container">
+        <div class="news-card">
+          <img class="news-card__pic" src="../images/news-image-desktop_01.png" alt="Картинка новости">
+          <img class="news-card__trash-icon" src="../images/news-trash-inactive.png" alt="Иконка удаления">
+          <img class="news-card__tooltip" src="../images/news-tooltip.png" alt="Иконка подсказки">
+          <i class="news-card__theme">Природа</i>
+          <div class="news-card__content-wrapper">
+            <time class="news-card__date" datetime="2019-08-02">2 августа, 2019</time>
+            <h3 class="news-card__title">Национальное достояние – парки</h3>
+            <p class="news-card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков...</p>
+            <p class="news-card__source">Лента.ру</p>
+          </div>
+        </div>
+        <div class="news-card">
+          <img class="news-card__pic" src="../images/news-image-desktop_02.png" alt="Картинка новости">
+          <img class="news-card__trash-icon" src="../images/news-trash-inactive.png" alt="Иконка удаления">
+          <img class="news-card__tooltip" src="../images/news-tooltip.png" alt="Иконка подсказки">
+          <i class="news-card__theme">Природа</i>
+          <div class="news-card__content-wrapper">
+            <time class="news-card__date" datetime="2019-08-02">2 августа, 2019</time>
+            <h3 class="news-card__title">Лесные огоньки: история одной фотографии</h3>
+            <p class="news-card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад...</p>
+            <p class="news-card__source">Медуза</p>
+          </div>
+        </div>
+        <div class="news-card">
+          <img class="news-card__pic" src="../images/news-image-desktop_03.png" alt="Картинка новости">
+          <img class="news-card__trash-icon" src="../images/news-trash-inactive.png" alt="Иконка удаления">
+          <img class="news-card__tooltip" src="../images/news-tooltip.png" alt="Иконка подсказки">
+          <i class="news-card__theme">Тайга</i>
+          <div class="news-card__content-wrapper">
+            <time class="news-card__date" datetime="2019-08-02">2 августа, 2019</time>
+            <h3 class="news-card__title">Национальное достояние – парки</h3>
+            <p class="news-card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков...</p>
+            <p class="news-card__source">Риа</p>
+          </div>
+        </div>
+        <div class="news-card">
+          <img class="news-card__pic" src="../images/news-image-desktop_01.png" alt="Картинка новости">
+          <img class="news-card__trash-icon" src="../images/news-trash-inactive.png" alt="Иконка удаления">
+          <img class="news-card__tooltip" src="../images/news-tooltip.png" alt="Иконка подсказки">
+          <i class="news-card__theme">Парки</i>
+          <div class="news-card__content-wrapper">
+            <time class="news-card__date" datetime="2019-08-02">2 августа, 2019</time>
+            <h3 class="news-card__title">Национальное достояние – парки</h3>
+            <p class="news-card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков...</p>
+            <p class="news-card__source">Лента.ру</p>
+          </div>
+        </div>
+        <div class="news-card">
+          <img class="news-card__pic" src="../images/news-image-desktop_02.png" alt="Картинка новости">
+          <img class="news-card__trash-icon" src="../images/news-trash-inactive.png" alt="Иконка удаления">
+          <img class="news-card__tooltip" src="../images/news-tooltip.png" alt="Иконка подсказки">
+          <i class="news-card__theme">Фотография</i>
+          <div class="news-card__content-wrapper">
+            <time class="news-card__date" datetime="2019-08-02">2 августа, 2019</time>
+            <h3 class="news-card__title">Лесные огоньки: история одной фотографии</h3>
+            <p class="news-card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад...</p>
+            <p class="news-card__source">Медуза</p>
+          </div>
         </div>
       </div>
     </section>
+    <footer class="footer">
+      <p class="footer__copyright">&copy; 2020 Supersite, Powered by News API</p>
+      <nav class="footer__menu">
+        <div class="footer__menu-wrapper">
+          <a class="link footer__link" href="../" rel="noopener noreferrer">Главная</a>
+          <a class="link footer__link" href="https://praktikum.yandex.ru/" target="_blank" rel="noopener noreferrer">Яндекс.Практикум</a>
+        </div>
+        <a class="link footer__link footer__link_type_icon" href="https://github.com/m3ltman?tab=repositories" target="_blank" rel="noopener noreferrer"><img src="../images/github.png" alt="Github-icon"></a>
+        <a class="link footer__link footer__link_type_icon" href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><img src="../images/fb.png" alt="Facebook-icon"></a>
+      </nav>
+    </footer>
   </main>
-  <script src="../scripts/news.9ae3ae9e3f52f82caf33.js?fa11f0fbfe6bef1eb14f"></script>
+  <script src="../scripts/news.55d6456aa5dd1aae0f69.js?930ab87672b1f08560d8"></script>
 </body>
 </html>

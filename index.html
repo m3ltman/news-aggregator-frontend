@@ -4,122 +4,229 @@
   <meta charset="UTF-8">
   <title>news-aggregator</title>
   <meta name="author" content="Дима Кошелев">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description"
     content="Сервис, который позволяет зарегистрированным пользователям получать и сохранять новости."
   >
-  <link rel="stylesheet" href="styles/main.e1af8744e9a6be7f6c0e.css">
+  <link rel="stylesheet" href="styles/main.0e7e6fc725c0695453df.css">
   <link rel="icon" href="images/favicon.png">
 </head>
+
 <body>
   <main class="page">
     <section class="search">
       <header class="header">
-        <p class="header__title">NewsExplorer</p>
+        <a href="./" class="header__title">NewsExplorer</a>
         <menu class="header__nav">
           <li><a class="link link_active" href="#">Главная</a></li>
           <li><a class="link link_inactive" href="./news">Сохранённые статьи</a></li>
           <li>
-            <button type="button" class="button header__login-button">Грета
-              <img src="images/logout.png">
+            <button type="button" class="header__button">Грета
+              <img src="images/main-logout.png" alt="Кнопка логина">
             </button>
           </li>
         </menu>
+        <img class="header__show-menu-btn" src="images/header-main-mobile-menu.png" alt="mobile-menu">
       </header>
-      <div class="search__header-border"></div>
       <div class="search__main-content">
         <h1 class="search__header">Что в мире творится?</h1>
-        <p class="search__description">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</p>
+        <p class="search__description">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</p>
         <div class="search__box">
           <input class="search__bar" type="search" placeholder="Введите тему новости">
           <button type="button" class="button search__button">Искать</button>
         </div>
       </div>
     </section>
+
     <section class="cards">
       <!-- В данной секции сверстал и применил стили для трёх состояний, на этапе JS сделаю их корректное отображение, пока просто закомментировал -->
 
       <!-- Статьи не найдены -->
 
-      <!-- <img class="cards__not-found-img" src="images/not-found_v1.svg" alt="Карточки не найдены">
-      <h2 class="cards__not-found-header">Ничего не найдено</h2>
-      <p class="cards__not-found-desc">К сожалению по вашему запросу ничего не найдено.</p> -->
+      <!-- <div class="not-found">
+        <img class="not-found__img" src="images/not-found_v1.svg" alt="Карточки не найдены">
+        <h2 class="not-found__header">Ничего не найдено</h2>
+        <p class="not-found__desc">К сожалению по вашему запросу ничего не найдено.</p>
+      </div> -->
 
       <!-- Прелоадер грузит данные -->
 
-      <!-- <i class="cards__circle-preloader"></i>
-      <p class="cards__circle-preloader-text">Идет поиск новостей...</p> -->
+      <!-- <div class="preloader">
+        <i class="preloader__circle"></i>
+        <p class="preloader__text">Идет поиск новостей...</p>
+      </div> -->
 
       <!-- Карточки с новостями выводятся на экран -->
 
       <h2 class="cards__title">Результаты поиска</h2>
       <div class="cards__container">
         <div class="news-card">
-          <img class="news-card__pic" src="images/image_08.png" alt="Картинка новости">
+          <img class="news-card__pic" src="images/main-image-desktop_01.png" alt="Картинка новости">
           <img class="news-card__bookmark" src="images/bookmark-inactive.png" alt="Иконка закладки">
-          <img class="news-card__tooltip" src="images/tooltip.png" alt="Иконка подсказки">
+          <img class="news-card__tooltip" src="images/main-tooltip.png" alt="Иконка подсказки">
           <div class="news-card__content-wrapper">
             <time class="news-card__date" datetime="2019-08-02">2 августа, 2019</time>
             <h3 class="news-card__title">Национальное достояние – парки</h3>
-            <p class="news-card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система
-              национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
-            </p>
+            <p class="news-card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков...</p>
             <p class="news-card__source">Лента.ру</p>
           </div>
         </div>
         <div class="news-card">
-          <img class="news-card__pic" src="images/image_04.png" alt="Картинка новости">
+          <img class="news-card__pic" src="images/news-image-desktop_01.png" alt="Картинка новости">
           <img class="news-card__bookmark" src="images/bookmark-marked.png" alt="Иконка закладки">
-          <!-- <img class="news-card__tooltip" src="images/tooltip.png" alt="Иконка подсказки"> -->
           <div class="news-card__content-wrapper">
             <time class="news-card__date" datetime="2019-08-02">2 августа, 2019</time>
-            <h3 class="news-card__title">Лесные огоньки: история одной фотографии</h3>
-            <p class="news-card__text">Фотограф отвлеклась от освещения суровой политической реальности
-              Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.
-            </p>
+            <h3 class="news-card__title">Национальное достояние – парки</h3>
+            <p class="news-card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков...</p>
             <p class="news-card__source">Медуза</p>
           </div>
         </div>
         <div class="news-card">
-          <img class="news-card__pic" src="images/image_07.png" alt="Картинка новости">
+          <img class="news-card__pic" src="images/main-image-desktop_03.png" alt="Картинка новости">
           <img class="news-card__bookmark" src="images/bookmark-inactive.png" alt="Иконка закладки">
-          <img class="news-card__tooltip" src="images/tooltip.png" alt="Иконка подсказки">
+          <img class="news-card__tooltip" src="images/main-tooltip.png" alt="Иконка подсказки">
           <div class="news-card__content-wrapper">
             <time class="news-card__date" datetime="2019-08-02">2 августа, 2019</time>
-            <h3 class="news-card__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
-            <p class="news-card__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения.
-              В этот раз он отправился в Двинско-Пинежскую тайгу, где...
-            </p>
-            <p class="news-card__source">Риа</p>
+            <h3 class="news-card__title">Национальное достояние – парки</h3>
+            <p class="news-card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков...</p>
+            <p class="news-card__source">РИА</p>
           </div>
         </div>
       </div>
       <button type="button" class="button news-card__show-button">Показать еще</button>
     </section>
+
     <section class="about-author">
       <picture>
-
-        <img class="about-author__pic" src="images/author.png" alt="Фотография автора сайта">
+        <source media="(max-width: 768px)" srcset="images/author-mobile.png">
+        <source media="(max-width: 1024px)" srcset="images/author-tablet.png">
+        <img class="about-author__pic" src="images/author-desktop.png" alt="Фотография автора сайта">
       </picture>
-      <h2 class="about-author__header">Об авторе</h2>
       <div class="about-author__content-wrapper">
-        <p class="about-author__desc">Это блок с описанием автора проекта.
-          Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.
-        </p>
-        <p class="about-author__desc">Также можно рассказать о процессе обучения в
-          Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.
-        </p>
+        <h2 class="about-author__header">Об авторе</h2>
+          <p class="about-author__desc">Это блок с описанием автора проекта.
+            Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.
+          </p>
+          <p class="about-author__desc">Также можно рассказать о процессе обучения в
+            Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.
+          </p>
       </div>
     </section>
+
+    <div class="popup">
+      <div class="popup__content">
+        <img src="images/back.png" class="popup__close" alt="Иконка закрытия окна">
+        <h3 class="popup__title">Регистрация</h3>
+        <form class="popup__form" name="sign-up">
+          <div class="popup__input-container">
+            <label class="popup__label" for="sign-up-email">Email</label>
+            <input
+              required
+              type="email"
+              id="sign-up-email"
+              name="sign-up-email"
+              minlength="2" maxlength="30"
+              class="popup__input"
+              placeholder="Введите почту"
+              data-lpignore="true"
+            >
+            <span class="popup__error-message"></span>
+          </div>
+          <div class="popup__input-container">
+            <label class="popup__label" for="sign-up-password">Пароль</label>
+            <input
+              required
+              type="password"
+              id="sign-up-password"
+              name="sign-up-password"
+              minlength="8" maxlength="30"
+              class="popup__input"
+              placeholder="Введите пароль"
+              data-lpignore="true"
+            >
+            <span class="popup__error-message"></span>
+          </div>
+          <div class="popup__input-container">
+            <label class="popup__label" for="reg-name">Имя</label>
+            <input
+              required
+              type="text"
+              id="reg-name"
+              name="user-name"
+              minlength="2" maxlength="30"
+              class="popup__input"
+              placeholder="Введите своё имя"
+              data-lpignore="true"
+            >
+            <span class="popup__error-message"></span>
+          </div>
+          <span class="popup__error-message popup__api-error"></span>
+          <button class="button button_disabled" disabled type="submit">Зарегистрироваться</button>
+          <p class="popup__switch">или <span class="popup__switch-link">Войти</span></p>
+        </form>
+      </div>
+    </div>
+
+    <div class="popup">
+      <div class="popup__content">
+        <img src="images/back.png" class="popup__close" alt="Иконка закрытия окна">
+        <h3 class="popup__title">Вход</h3>
+        <form class="popup__form" name="sign-in">
+          <div class="popup__input-container">
+            <label class="popup__label" for="sign-in-email">Email</label>
+            <input
+              required
+              type="email"
+              id="sign-in-email"
+              name="sign-in-email"
+              minlength="2" maxlength="30"
+              class="popup__input"
+              placeholder="Введите почту"
+              data-lpignore="true"
+            >
+            <span class="popup__error-message"></span>
+          </div>
+          <div class="popup__input-container">
+            <label class="popup__label" for="sign-in-password">Пароль</label>
+            <input
+              required
+              type="password"
+              id="sign-in-password"
+              name="sign-in-password"
+              minlength="8" maxlength="30"
+              class="popup__input"
+              placeholder="Введите пароль"
+              data-lpignore="true"
+            >
+            <span class="popup__error-message"></span>
+          </div>
+          <span class="popup__error-message popup__api-error"></span>
+          <button class="button button_disabled" disabled type="submit">Войти</button>
+          <p class="popup__switch">или <span class="popup__switch-link">Зарегистрироваться</span></p>
+        </form>
+      </div>
+    </div>
+
+    <div class="popup">
+      <div class="popup__content">
+        <img src="images/back.png" class="popup__close" alt="Иконка закрытия окна">
+        <h3 class="popup__title">Пользователь успешно зарегистрирован!</h3>
+        <p class="popup__switch popup__switch-link popup__switch-link_created">Выполнить вход</p>
+      </div>
+    </div>
+
     <footer class="footer">
       <p class="footer__copyright">&copy; 2020 Supersite, Powered by News API</p>
       <nav class="footer__menu">
-        <a class="link footer__link" href="#" rel="noopener noreferrer">Главная</a>
-        <a class="link footer__link" href="https://praktikum.yandex.ru/" target="_blank" rel="noopener noreferrer">Яндекс.Практикум</a>
-        <a class="link footer__link" href="https://github.com/m3ltman?tab=repositories" target="_blank" rel="noopener noreferrer"><img src="images/github.png"></a>
-        <a class="link footer__link" href="https://vk.com/m3ltman" target="_blank" rel="noopener noreferrer"><img src="images/fb.png"></a>
+        <div class="footer__menu-wrapper">
+          <a class="link footer__link" href="./" rel="noopener noreferrer">Главная</a>
+          <a class="link footer__link" href="https://praktikum.yandex.ru/" target="_blank" rel="noopener noreferrer">Яндекс.Практикум</a>
+        </div>
+        <a class="link footer__link footer__link_type_icon" href="https://github.com/m3ltman?tab=repositories" target="_blank" rel="noopener noreferrer"><img src="images/github.png" alt="Github logo"></a>
+        <a class="link footer__link footer__link_type_icon" href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><img src="images/fb.png" alt="Facebook logo"></a>
       </nav>
     </footer>
   </main>
-  <script src="scripts/main.83c8bca1a5ad16e5cf99.js"></script>
+  <script src="scripts/main.496204361c875698c189.js"></script>
 </body>
 </html>
