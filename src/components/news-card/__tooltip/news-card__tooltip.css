@@ -1,0 +1,6 @@
+.news-card__tooltip {
+  display: none;
+  position: absolute;
+  right: 50px;
+  top: 13px;
+}

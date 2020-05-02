@@ -1,14 +1,8 @@
-@import url('./__not-found-desc/cards__not-found-desc.css');
-@import url('./__not-found-header/cards__not-found-header.css');
-@import url(./__not-found-img/cards__not-found-img.css);
-@import url(./__circle-preloader/cards__circle-preloader.css);
-@import url(./__circle-preloader-text/cards__circle-preloader-text.css);
 @import url(./__container/cards__container.css);
 @import url(./__title/cards__title.css);
 
 .cards {
   background-color: #F5F6F7;
-  padding: 85px 0 80px 0;
   display: flex;
   flex-direction: column;
   align-items: center;

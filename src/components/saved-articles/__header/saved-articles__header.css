@@ -1,0 +1,23 @@
+.saved-articles__header {
+  font-family: Roboto,Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: rgba(26, 27, 34, 0.5);
+  margin: 0;
+
+}
+
+@media (max-width:1024px) {
+  .saved-articles__header {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 420px) {
+  .saved-articles__header {
+    font-size: 12px;
+  }
+}

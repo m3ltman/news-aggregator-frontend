@@ -1,0 +1,19 @@
+@import url(./_active/link_active.css);
+@import url(./_inactive/link_inactive.css);
+
+.link {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  margin-right: 35px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  text-decoration: none;
+  color: #FFF;
+}
+
+@media (max-width:1024px) {
+  .link {
+    font-size: 16px;
+    margin-right: 10px;
+  }
+}

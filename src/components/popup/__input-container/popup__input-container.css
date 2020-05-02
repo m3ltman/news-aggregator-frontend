@@ -1,0 +1,9 @@
+.popup__input-container {
+  height: 64px;
+  padding-bottom: 13px;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+}

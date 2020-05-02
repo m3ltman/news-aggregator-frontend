@@ -1,9 +1,9 @@
-@import url(./__name/header__name.css);
-@import url(./__nav-button/header__nav-button.css);
-@import url(./__nav-main/header__nav-main.css);
+@import url(./__title/header__title.css);
+@import url(./__button/header__button.css);
 @import url(./__nav/header__nav.css);
-@import url(./_logout/header_logout.css);
-@import url(./_login/header_login.css);
+@import url(./_color_dark/header_color_dark.css);
+@import url(./__show-menu-btn/header__show-menu-btn.css);
+@import url(./_mobile/header_mobile.css);
 
 .header {
   font-family: Roboto Slab, Arial, Helvetica, sans-serif;
@@ -14,4 +14,22 @@
   align-items: center;
   max-width: 85%;
   margin: auto;
+  color: #FFF;
+  border-bottom: 1px solid #C4C4C4;
+  padding: 0 7.5vw;
+}
+
+@media (max-width:1024px) {
+  .header {
+    max-width: 90%;
+    min-height: 66px;
+    padding: 0px 5.5vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    margin-bottom: 10px;
+    min-height: 56px;
+  }
 }

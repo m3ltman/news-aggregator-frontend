@@ -1,0 +1,9 @@
+.link.link_inactive {
+  color: #B6BCBF;
+}
+
+@media (max-width:768px) {
+  .link.link_inactive {
+    color: #FFF;
+  }
+}

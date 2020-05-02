@@ -1,19 +1,21 @@
 .search__button {
   position: absolute;
   right: 0px;
-  height: 64px;
   width: 165px;
-  border-radius: 100px;
-  background: #2F71E5;
-  border: none;
-  font-family: Roboto;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 24px;
-  color: #FFF;
-  outline: none;
 }
 
-.search__button:hover {
-  cursor: pointer;
+@media (max-width: 1024px) {
+  .search__button {
+    width: 161px;
+    right: -10px;
+    height: 56px;
+  }
+}
+
+@media (max-width: 420px) {
+  .search__button {
+    position: unset;
+    margin-top: 20px;
+    width: 100%;
+  }
 }

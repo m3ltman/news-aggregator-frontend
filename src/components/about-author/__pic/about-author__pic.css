@@ -1,0 +1,15 @@
+.about-author__pic {
+  margin-left: 104px;
+}
+
+@media (max-width:1024px) {
+  .about-author__pic {
+    margin-left: 40px;
+  }
+}
+
+@media (max-width:580px) {
+  .about-author__pic {
+    margin-left: 22px;
+  }
+}

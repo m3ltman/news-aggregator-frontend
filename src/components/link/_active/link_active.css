@@ -1,0 +1,18 @@
+.link_active {
+  padding-bottom: 26px;
+  border-bottom: solid;
+  cursor: default;
+}
+
+@media (max-width:1024px) {
+  .link.link_active {
+    padding-bottom: 21px;
+  }
+}
+
+@media (max-width:768px) {
+  .link.link_active {
+    padding: 0;
+    border-bottom: none;
+  }
+}

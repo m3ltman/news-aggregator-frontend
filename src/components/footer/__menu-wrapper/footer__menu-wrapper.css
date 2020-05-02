@@ -1,0 +1,9 @@
+@media (max-width:420px) {
+  .footer__menu-wrapper {
+    display: flex;
+    min-height: 74px;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 76px;
+  }
+}

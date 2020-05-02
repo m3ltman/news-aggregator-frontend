@@ -5,3 +5,17 @@
   margin: 80px auto 0;
   color: #FFF;
 }
+
+@media (max-width: 1024px) {
+  .search__main-content {
+    margin: 35px auto 0;
+    width: 57%;
+  }
+}
+
+@media (max-width: 768px) {
+  .search__main-content {
+    width: 90%;
+    margin: 30px auto 0;
+  }
+}

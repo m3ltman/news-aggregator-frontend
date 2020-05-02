@@ -1,8 +1,25 @@
 .cards__title {
+  margin: 0;
+  padding: 80px 0 0 105px;
   font-family: Roboto Slab;
   align-self: flex-start;
-  margin: 0 0 0 100px;
   font-size: 40px;
   line-height: 46px;
   color: #1A1B22;
+}
+
+@media (max-width:1024px) {
+  .cards__title {
+    font-size: 30px;
+    line-height: 34px;
+    padding: 40px 0 0 40px;
+  }
+}
+
+@media (max-width:420px) {
+  .cards__title {
+    padding: 32px 0 0;
+    margin: auto;
+    width: 90%;
+  }
 }

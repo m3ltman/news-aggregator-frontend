@@ -1,0 +1,35 @@
+.about-author__content-wrapper {
+  transform: translate(55px, 55px);
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  width: 42%;
+}
+
+@media (max-width:1024px) {
+  .about-author__content-wrapper {
+    transform: translate(30px,-25px);
+    width: 55%;
+  }
+}
+
+@media (max-width:768px) {
+  .about-author__content-wrapper {
+    width: 45%;
+  }
+}
+
+@media (max-width:580px) {
+  .about-author__content-wrapper {
+    width: 90%;
+    margin-top: 45px;
+  }
+}
+
+@media (max-width:420px) {
+  .about-author__content-wrapper {
+    transform: translate(16px,-20px);
+  }
+}

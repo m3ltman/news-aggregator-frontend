@@ -1,0 +1,22 @@
+.saved-articles__keywords {
+  margin: 30px 0 0;
+  font-family: Roboto,Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+@media (max-width:1024px) {
+  .saved-articles__keywords {
+    font-size: 14px;
+    line-height: 24px;
+    margin: 15px 0 0;
+  }
+}
+
+@media (max-width:420px) {
+  .saved-articles__keywords {
+    font-size: 18px;
+  }
+}

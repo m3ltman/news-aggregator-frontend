@@ -5,6 +5,12 @@
 @import url(./components/search/search.css);
 @import url(./components/cards/cards.css);
 @import url(./components/news-card/news-card.css);
+@import url(./components/about-author/about-author.css);
+@import url(./components/link/link.css);
+@import url(./components/footer/footer.css);
+@import url(./components/popup/popup.css);
+@import url(./components/not-found/not-found.css);
+@import url(./components/prealoder/preloader.css);
 
 html, body {
   margin: 0;

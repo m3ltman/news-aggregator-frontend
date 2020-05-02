@@ -4,8 +4,20 @@
   border-radius: 100px;
   height: 64px;
   outline: none;
-  padding: 21px 230px 21px 21px;
+  padding: 21px 170px 21px 21px;
   font-family: Roboto;
   font-size: 16px;
   line-height: 22px;
+}
+
+@media (max-width: 1024px) {
+  .search__bar {
+    height: 56px;
+  }
+}
+
+@media (max-width: 420px) {
+  .search__bar {
+    padding: 16px 16px;
+  }
 }

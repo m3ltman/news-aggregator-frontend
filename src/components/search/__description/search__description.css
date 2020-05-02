@@ -3,5 +3,18 @@
   font-family: Roboto, Arial, Helvetica, sans-serif;
   font-size: 18px;
   line-height: 24px;
-  width: 90%;
+  width: 97%;
+}
+
+@media (max-width: 1024px) {
+  .search__description {
+   width: 100%;
+   margin: 20px 0 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .search__description {
+    margin: 15px 0 0;
+  }
 }

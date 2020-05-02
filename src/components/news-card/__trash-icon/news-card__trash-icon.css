@@ -1,0 +1,24 @@
+.news-card__trash-icon {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+}
+
+.news-card__trash-icon:hover + .news-card__tooltip {
+  display: block;
+  cursor: pointer;
+}
+
+.news-card__trash-icon:hover {
+  content:url('../../../images/news-trash-active.png');
+}
+
+@media (max-width:1024px) {
+  .news-card__trash-icon {
+    top: 8px;
+    right: 8px;
+  }
+  .news-card__trash-icon:hover + .news-card__tooltip {
+    display: none;
+  }
+}

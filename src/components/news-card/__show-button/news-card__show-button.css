@@ -1,0 +1,29 @@
+.news-card__show-button {
+  margin-bottom: 85px;
+  background: #FFFFFF;
+  width: 288px;
+  height: 64px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: #000;
+}
+
+.news-card__show-button:hover {
+  background-color: #E6E8EB;
+}
+
+@media (max-width:1024px) {
+  .news-card__show-button {
+    margin-bottom: 45px;
+    width: 240px;
+    height: 56px;
+  }
+}
+
+@media (max-width:420px) {
+  .news-card__show-button {
+    width: 90%;
+    margin-bottom: 32px;
+  }
+}
