@@ -22,6 +22,10 @@
   display: flex;
 }
 
+.header.header_mobile .header__title {
+  color: #FFF;
+}
+
 .header.header_mobile .header__nav a {
   font-size: 18px;
   line-height: 56px;
