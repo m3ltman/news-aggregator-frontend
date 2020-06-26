@@ -26,7 +26,7 @@ const MAIN_API_OPTIONS = {
   serverUrl: 'https://api.news-aggregator.tk',
 };
 const NEWS_API_OPTIONS = {
-  serverUrl: 'https://newsapi.org/v2/everything',
+  serverUrl: 'https://praktikum.tk/news/v2/everything',
   apiKey: '8ed261fbbab34d4a85c2193047cedd72',
   userInput: SEARCH_BAR,
   today: getToday(),
