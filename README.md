@@ -3,6 +3,7 @@
 Сервис, на котором можно создать учётную запись, найти новости по запросу и сохранить в личном кабинете.
 
 Ссылки:
+
 https://m3ltman.github.io/news-aggregator-frontend/
 
 https://news-aggregator.tk/
