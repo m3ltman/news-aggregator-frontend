@@ -8,92 +8,48 @@
   <meta name="description"
     content="Сервис, который позволяет зарегистрированным пользователям получать и сохранять новости."
   >
-  <link rel="stylesheet" href="styles/main.4e24ce0db7ccbbe83f00.css">
+  <link rel="stylesheet" href="styles/main.d00f0c4268665f1490ce.css">
   <link rel="icon" href="images/favicon.png">
 </head>
 
 <body>
   <main class="page">
+
     <section class="search">
       <header class="header">
         <a href="./" class="header__title">NewsExplorer</a>
-        <menu class="header__nav">
-          <li><a class="link link_active" href="#">Главная</a></li>
-          <li><a class="link link_inactive" href="./news">Сохранённые статьи</a></li>
-          <li>
-            <button type="button" class="header__button">Грета
-              <img src="images/main-logout.png" alt="Кнопка логина">
-            </button>
-          </li>
-        </menu>
         <img class="header__show-menu-btn" src="images/header-main-mobile-menu.png" alt="mobile-menu">
       </header>
+
       <div class="search__main-content">
         <h1 class="search__header">Что в мире творится?</h1>
         <p class="search__description">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</p>
         <div class="search__box">
-          <input class="search__bar" type="search" placeholder="Введите тему новости">
-          <button type="button" class="button search__button">Искать</button>
+          <input class="search__bar" id="search" type="search" placeholder="Введите тему новости" required>
+          <button type="button" class="button search__button" disabled>Искать</button>
         </div>
       </div>
     </section>
 
-    <section class="cards">
-      <!-- В данной секции сверстал и применил стили для трёх состояний, на этапе JS сделаю их корректное отображение, пока просто закомментировал -->
+    <!-- Прелоадер грузит данные -->
 
-      <!-- Статьи не найдены -->
+    <div class="preloader">
+      <i class="preloader__circle"></i>
+      <p class="preloader__text">Идет поиск новостей...</p>
+    </div>
 
-      <!-- <div class="not-found">
+    <section class="results">
+      <div class="results__success">
+        <h2 class="results__title">Результаты поиска</h2>
+        <div class="cards"></div>
+        <button type="button" class="button results__show-button">Показать еще</button>
+      </div>
+      <div class="not-found">
         <img class="not-found__img" src="images/not-found_v1.svg" alt="Карточки не найдены">
         <h2 class="not-found__header">Ничего не найдено</h2>
         <p class="not-found__desc">К сожалению по вашему запросу ничего не найдено.</p>
-      </div> -->
-
-      <!-- Прелоадер грузит данные -->
-
-      <!-- <div class="preloader">
-        <i class="preloader__circle"></i>
-        <p class="preloader__text">Идет поиск новостей...</p>
-      </div> -->
-
-      <!-- Карточки с новостями выводятся на экран -->
-
-      <h2 class="cards__title">Результаты поиска</h2>
-      <div class="cards__container">
-        <div class="news-card">
-          <img class="news-card__pic" src="images/main-image-desktop_01.png" alt="Картинка новости">
-          <img class="news-card__bookmark" src="images/bookmark-inactive.png" alt="Иконка закладки">
-          <img class="news-card__tooltip" src="images/main-tooltip.png" alt="Иконка подсказки">
-          <div class="news-card__content-wrapper">
-            <time class="news-card__date" datetime="2019-08-02">2 августа, 2019</time>
-            <h3 class="news-card__title">Национальное достояние – парки</h3>
-            <p class="news-card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков...</p>
-            <p class="news-card__source">Лента.ру</p>
-          </div>
-        </div>
-        <div class="news-card">
-          <img class="news-card__pic" src="images/news-image-desktop_01.png" alt="Картинка новости">
-          <img class="news-card__bookmark" src="images/bookmark-marked.png" alt="Иконка закладки">
-          <div class="news-card__content-wrapper">
-            <time class="news-card__date" datetime="2019-08-02">2 августа, 2019</time>
-            <h3 class="news-card__title">Национальное достояние – парки</h3>
-            <p class="news-card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков...</p>
-            <p class="news-card__source">Медуза</p>
-          </div>
-        </div>
-        <div class="news-card">
-          <img class="news-card__pic" src="images/main-image-desktop_03.png" alt="Картинка новости">
-          <img class="news-card__bookmark" src="images/bookmark-inactive.png" alt="Иконка закладки">
-          <img class="news-card__tooltip" src="images/main-tooltip.png" alt="Иконка подсказки">
-          <div class="news-card__content-wrapper">
-            <time class="news-card__date" datetime="2019-08-02">2 августа, 2019</time>
-            <h3 class="news-card__title">Национальное достояние – парки</h3>
-            <p class="news-card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков...</p>
-            <p class="news-card__source">РИА</p>
-          </div>
-        </div>
       </div>
-      <button type="button" class="button news-card__show-button">Показать еще</button>
+      <p class="results__error"></p>
     </section>
 
     <section class="about-author">
@@ -113,105 +69,112 @@
       </div>
     </section>
 
-    <div class="popup">
-      <div class="popup__content">
+    <div class="popup popup-signup">
+      <div class="popup__container">
         <img src="images/back.png" class="popup__close" alt="Иконка закрытия окна">
-        <h3 class="popup__title">Регистрация</h3>
-        <form class="popup__form" name="sign-up">
-          <div class="popup__input-container">
-            <label class="popup__label" for="sign-up-email">Email</label>
-            <input
-              required
-              type="email"
-              id="sign-up-email"
-              name="sign-up-email"
-              minlength="2" maxlength="30"
-              class="popup__input"
-              placeholder="Введите почту"
-              data-lpignore="true"
-            >
-            <span class="popup__error-message"></span>
-          </div>
-          <div class="popup__input-container">
-            <label class="popup__label" for="sign-up-password">Пароль</label>
-            <input
-              required
-              type="password"
-              id="sign-up-password"
-              name="sign-up-password"
-              minlength="8" maxlength="30"
-              class="popup__input"
-              placeholder="Введите пароль"
-              data-lpignore="true"
-            >
-            <span class="popup__error-message"></span>
-          </div>
-          <div class="popup__input-container">
-            <label class="popup__label" for="reg-name">Имя</label>
-            <input
-              required
-              type="text"
-              id="reg-name"
-              name="user-name"
-              minlength="2" maxlength="30"
-              class="popup__input"
-              placeholder="Введите своё имя"
-              data-lpignore="true"
-            >
-            <span class="popup__error-message"></span>
-          </div>
-          <span class="popup__error-message popup__api-error"></span>
-          <button class="button button_disabled" disabled type="submit">Зарегистрироваться</button>
-          <p class="popup__switch">или <span class="popup__switch-link">Войти</span></p>
-        </form>
+        <div class="popup__content">
+          <h3 class="popup__title">Регистрация</h3>
+          <form class="popup__form" name="sign-up">
+            <div class="input-container">
+              <label class="popup__label" for="email">Email</label>
+              <input
+                required
+                type="email"
+                pattern="[\w\-]+@[\w\-]+\.\w+"
+                id="sign-up-email"
+                name="email"
+                minlength="2" maxlength="30"
+                class="popup__input"
+                placeholder="Введите почту"
+                data-lpignore="true"
+              >
+              <span class="error-message" id="error-sign-up-email"></span>
+            </div>
+            <div class="input-container">
+              <label class="popup__label" for="password">Пароль</label>
+              <input
+                required
+                type="password"
+                id="sign-up-password"
+                name="password"
+                minlength="8" maxlength="30"
+                class="popup__input"
+                placeholder="Введите пароль"
+                data-lpignore="true"
+              >
+              <span class="error-message" id="error-sign-up-password"></span>
+            </div>
+            <div class="input-container">
+              <label class="popup__label" for="name">Имя</label>
+              <input
+                required
+                type="text"
+                id="sign-up-name"
+                name="name"
+                minlength="2" maxlength="30"
+                class="popup__input"
+                placeholder="Введите своё имя"
+                data-lpignore="true"
+              >
+              <span class="error-message" id="error-sign-up-name"></span>
+            </div>
+            <span class="error-message popup__api-error"></span>
+            <button class="button button_disabled" disabled type="submit">Зарегистрироваться</button>
+            <p class="popup__switch">или <span class="popup__switch-link">Войти</span></p>
+          </form>
+        </div>
       </div>
     </div>
 
-    <div class="popup">
-      <div class="popup__content">
+    <div class="popup popup-signin">
+      <div class="popup__container">
         <img src="images/back.png" class="popup__close" alt="Иконка закрытия окна">
-        <h3 class="popup__title">Вход</h3>
-        <form class="popup__form" name="sign-in">
-          <div class="popup__input-container">
-            <label class="popup__label" for="sign-in-email">Email</label>
-            <input
-              required
-              type="email"
-              id="sign-in-email"
-              name="sign-in-email"
-              minlength="2" maxlength="30"
-              class="popup__input"
-              placeholder="Введите почту"
-              data-lpignore="true"
-            >
-            <span class="popup__error-message"></span>
-          </div>
-          <div class="popup__input-container">
-            <label class="popup__label" for="sign-in-password">Пароль</label>
-            <input
-              required
-              type="password"
-              id="sign-in-password"
-              name="sign-in-password"
-              minlength="8" maxlength="30"
-              class="popup__input"
-              placeholder="Введите пароль"
-              data-lpignore="true"
-            >
-            <span class="popup__error-message"></span>
-          </div>
-          <span class="popup__error-message popup__api-error"></span>
-          <button class="button button_disabled" disabled type="submit">Войти</button>
-          <p class="popup__switch">или <span class="popup__switch-link">Зарегистрироваться</span></p>
-        </form>
+        <div class="popup__content">
+          <h3 class="popup__title">Вход</h3>
+          <form class="popup__form" name="sign-in">
+            <div class="input-container">
+              <label class="popup__label" for="email">Email</label>
+              <input
+                required
+                type="email"
+                id="sign-in-email"
+                name="email"
+                minlength="2" maxlength="30"
+                class="popup__input"
+                placeholder="Введите почту"
+                data-lpignore="true"
+              >
+              <span class="error-message" id="error-sign-in-email"></span>
+            </div>
+            <div class="input-container">
+              <label class="popup__label" for="password">Пароль</label>
+              <input
+                required
+                type="password"
+                id="sign-in-password"
+                name="password"
+                minlength="8" maxlength="30"
+                class="popup__input"
+                placeholder="Введите пароль"
+                data-lpignore="true"
+              >
+              <span class="error-message" id="error-sign-in-password"></span>
+            </div>
+            <span class="error-message popup__api-error"></span>
+            <button class="button button_disabled" disabled type="submit">Войти</button>
+            <p class="popup__switch">или <span class="popup__switch-link">Зарегистрироваться</span></p>
+          </form>
+        </div>
       </div>
     </div>
 
-    <div class="popup">
-      <div class="popup__content">
+    <div class="popup popup-success">
+      <div class="popup__container">
         <img src="images/back.png" class="popup__close" alt="Иконка закрытия окна">
-        <h3 class="popup__title">Пользователь успешно зарегистрирован!</h3>
-        <p class="popup__switch popup__switch-link popup__switch-link_created">Выполнить вход</p>
+        <div class="popup__content">
+          <h3 class="popup__title">Пользователь успешно зарегистрирован!</h3>
+          <span class="popup__switch-link popup__switch-link_created">Выполнить вход</span>
+        </div>
       </div>
     </div>
 
@@ -227,6 +190,6 @@
       </nav>
     </footer>
   </main>
-  <script src="scripts/main.496204361c875698c189.js"></script>
+  <script src="scripts/main.566469200adef6bbea81.js"></script>
 </body>
 </html>
