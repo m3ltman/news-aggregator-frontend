@@ -4,11 +4,10 @@
 @import url(./__text/news-card__text.css);
 @import url(./__title/news-card__title.css);
 @import url(./__content-wrapper/news-card__content-wrapper.css);
-@import url(./__bookmark/news-card__bookmark.css);
-@import url(./__trash-icon/news-card__trash-icon.css);
+@import url(./__icon/news-card__icon.css);
 @import url(./__tooltip/news-card__tooltip.css);
-@import url(./__show-button/news-card__show-button.css);
 @import url(./__theme/news-card__theme.css);
+@import url(./__header-wrapper/news-card__header-wrapper.css);
 
 .news-card {
   position: relative;

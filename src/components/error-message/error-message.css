@@ -1,8 +1,7 @@
-.popup__error-message {
+.error-message {
   color: #FF3333;
   font-size: 12px;
   line-height: 15px;
   transition: .3s;
-  padding: 0px;
-  opacity: 1;
+  opacity: 0;
 }

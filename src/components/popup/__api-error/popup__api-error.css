@@ -1,3 +1,5 @@
+@import url(./_visible/popup__api-error_visible.css);
+
 .popup__api-error {
   align-self: center;
   padding-bottom: 10px;

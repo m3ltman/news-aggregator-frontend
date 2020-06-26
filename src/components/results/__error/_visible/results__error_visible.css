@@ -1,0 +1,7 @@
+.results__error.results__error_visible {
+  display: block;
+  text-align: center;
+  background-color: white;
+  display: block;
+  color: red;
+}

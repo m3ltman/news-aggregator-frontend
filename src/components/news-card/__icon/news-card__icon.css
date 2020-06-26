@@ -1,0 +1,42 @@
+@import url(./_page_news/news-card__icon_page_news.css);
+
+.news-card__icon {
+  background: url(../../../images/bookmark-inactive.png) center no-repeat;
+  background-color: transparent;
+  border-radius: 8px;
+  border: transparent;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 20px;
+}
+
+.news-card__icon:hover {
+  background-image: url(../../../images/bookmark-hover.png);
+}
+
+.news-card__icon:hover + .news-card__tooltip_active {
+  display: block;
+  cursor: pointer;
+}
+
+.news-card__icon.news-card__icon_active {
+  background-image: url(../../../images/bookmark-marked.png);
+}
+
+@media (max-width:1024px) {
+  .news-card__icon {
+    top: 10px;
+    right: 10px;
+  }
+  .news-card__icon:hover + .news-card__tooltip_active {
+    margin-top: 10px;
+  }
+}
+
+@media(max-width:768px) {
+  .news-card__icon:hover + .news-card__tooltip_active {
+    display: none;
+  }
+}

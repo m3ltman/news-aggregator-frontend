@@ -3,7 +3,7 @@
 @import url(./components/button/button.css);
 @import url(./components/page/page.css);
 @import url(./components/search/search.css);
-@import url(./components/cards/cards.css);
+@import url(./components/results/results.css);
 @import url(./components/news-card/news-card.css);
 @import url(./components/about-author/about-author.css);
 @import url(./components/link/link.css);
@@ -11,6 +11,9 @@
 @import url(./components/popup/popup.css);
 @import url(./components/not-found/not-found.css);
 @import url(./components/prealoder/preloader.css);
+@import url(./components/input__container/input-container.css);
+@import url(./components/error-message/error-message.css);
+@import url(./components/cards/cards.css);
 
 html, body {
   margin: 0;

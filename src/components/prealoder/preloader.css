@@ -1,9 +1,11 @@
 @import url(./__circle/preloader__circle.css);
 @import url(./__text/preloader__text.css);
+@import url(./_visible/preloader_visible.css);
 
 .preloader {
   padding: 80px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  display:none;
 }

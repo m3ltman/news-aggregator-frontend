@@ -1,0 +1,7 @@
+.news-card__header-wrapper {
+  position: absolute;
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  top: 25px;
+}

@@ -1,13 +1,15 @@
+@import url(./_invalid/search__bar_invalid.css);
+
 .search__bar {
   width: 100%;
   border: 1px solid #D1D2D6;
   border-radius: 100px;
   height: 64px;
-  outline: none;
   padding: 21px 170px 21px 21px;
   font-family: Roboto;
   font-size: 16px;
   line-height: 22px;
+  outline: 0;
 }
 
 @media (max-width: 1024px) {

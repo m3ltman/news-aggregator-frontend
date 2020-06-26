@@ -1,4 +1,6 @@
 .news-card__source {
+  position: absolute;
+  bottom: 25px;
   margin: 15px 0 0;
   font-family: Roboto Slab, Arial, Helvetica, sans-serif;
   font-style: normal;
@@ -8,4 +10,11 @@
   letter-spacing: 0.4px;
   text-transform: uppercase;
   color: #B6BCBF;
+  text-decoration: none;
+}
+
+@media (max-width:1024px) {
+  .news-card__source {
+    bottom: 20px;
+  }
 }

@@ -7,6 +7,7 @@
 @import url(../../components/cards/cards.css);
 @import url(../../components/news-card/news-card.css);
 @import url(../../components/footer/footer.css);
+@import url(../../components/saved-cards/saved-cards.css);
 
 html, body {
   margin: 0;

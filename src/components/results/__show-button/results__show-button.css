@@ -1,4 +1,6 @@
-.news-card__show-button {
+@import url(./_visible/results__show-button_visible.css);
+
+.results__show-button {
   margin-bottom: 85px;
   background: #FFFFFF;
   width: 288px;
@@ -7,14 +9,15 @@
   border: none;
   cursor: pointer;
   color: #000;
+  display: none;
 }
 
-.news-card__show-button:hover {
+.results__show-button:hover {
   background-color: #E6E8EB;
 }
 
 @media (max-width:1024px) {
-  .news-card__show-button {
+  .results__show-button {
     margin-bottom: 45px;
     width: 240px;
     height: 56px;
@@ -22,7 +25,7 @@
 }
 
 @media (max-width:420px) {
-  .news-card__show-button {
+  .results__show-button {
     width: 90%;
     margin-bottom: 32px;
   }

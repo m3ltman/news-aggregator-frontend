@@ -7,7 +7,7 @@
   font-size: 14px;
   line-height: 17px;
   box-sizing: border-box;
-  outline: none;
+  outline: 0;
 }
 
 .popup__input:focus {

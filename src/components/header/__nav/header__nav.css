@@ -1,3 +1,5 @@
+@import url(./_hidden/header__nav_hidden.css);
+
 .header__nav {
   font-family: Roboto, Arial, Helvetica, sans-serif;
   margin: 0;
