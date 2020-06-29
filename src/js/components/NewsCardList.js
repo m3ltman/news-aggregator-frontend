@@ -9,6 +9,7 @@ import {
   RESULTS_SUCCESS,
   RESULTS_ERROR,
   SHOWMORE_BUTTON,
+  INITIAL_ARTICLES_AMOUNT,
 } from '../constants/constants';
 import chunkArray from '../utils/chunk-array';
 
@@ -31,7 +32,7 @@ export default class NewsCardList extends BaseComponent {
       RESULTS_ERROR.classList.remove('results__error_visible');
     } else {
 
-      if (articles.length > 3) {
+      if (articles.length > INITIAL_ARTICLES_AMOUNT) {
         SHOWMORE_BUTTON.classList.add('results__show-button_visible');
       }
 

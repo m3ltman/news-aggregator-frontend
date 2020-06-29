@@ -28,7 +28,8 @@ mainApi.getArticles()
       article.keyword,
       article._id,
     ));
-  });
+  })
+  .catch(err => console.log(err));
 
 newsCard.setEventListeners();
 header.setEventListeners();

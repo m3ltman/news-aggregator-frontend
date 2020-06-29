@@ -101,11 +101,10 @@ export default class MainApi {
         }
         return Promise.reject(res.statusText);
       })
-      .then(articles => articles)
-      .catch(err => console.log(err));
+      .then(articles => articles);
   }
 
-  createArticle(cardData, fillCard) {
+  createArticle(cardData) {
     return fetch(`${this.serverUrl}/articles`, {
       method: 'POST',
       credentials: 'include',
@@ -121,34 +120,13 @@ export default class MainApi {
         link: cardData.link,
         image: cardData.image,
       }),
-    })
-      .then((res) => {
-        if (res.ok) {
-          return res.json();
-        }
-        return Promise.reject(res.statusText);
-      })
-      .then((article) => {
-        fillCard(article);
-      })
-      .catch(err => console.log (err));
+    });
   }
 
-  removeArticle(cardId, reRenderResults, clearCardIcon) {
+  removeArticle(cardId) {
     return fetch(`${this.serverUrl}/articles/${cardId}`, {
       method: 'DELETE',
       credentials: 'include',
-    })
-      .then((res) => {
-        if (res.ok) {
-          return res.json();
-        }
-        return Promise.reject(res.status);
-      })
-      .then(_ => this.getArticles())
-      .then((articles) => {
-        reRenderResults ? reRenderResults(articles) : clearCardIcon()
-      })
-      .catch(err => console.log(err));
+    });
   }
 }

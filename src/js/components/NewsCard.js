@@ -68,11 +68,30 @@ export default class NewsCard extends BaseComponent {
           card.dataset.owner = '';
           e.target.classList.remove('news-card__icon_active');
         };
-        this._mainApi.removeArticle(card.dataset.id, clearCard);
+        this._mainApi.removeArticle(card.dataset.id)
+          .then((res) => {
+            if (!res.ok) {
+              return Promise.reject(res.statusText);
+            }
+            return res.json();
+          })
+          .then(_ => clearCard())
+          .catch(err => console.log(err));
 
       } else if (e.target.classList.contains('news-card__icon_page_news')) {
-        CARDS_CONTAINER.removeChild(card);
-        this._mainApi.removeArticle(card.dataset.id, this._profileClass.renderResultsMarkUp);
+        this._mainApi.removeArticle(card.dataset.id)
+          .then((res) => {
+            if (!res.ok) {
+              return Promise.reject(res.statusText);
+            }
+            return res.json();
+          })
+          .then(_ => this._mainApi.getArticles())
+          .then((articles) => {
+            this._profileClass.renderResultsMarkUp(articles);
+            CARDS_CONTAINER.removeChild(card);
+          })
+          .catch(err => console.log(err));
 
       } else {
         const fillCard = (article) => {
@@ -80,7 +99,17 @@ export default class NewsCard extends BaseComponent {
           card.dataset.owner = article.article.owner;
           e.target.classList.add('news-card__icon_active');
         };
-        this._mainApi.createArticle(cardData, fillCard);
+        this._mainApi.createArticle(cardData)
+          .then((res) => {
+            if (res.ok) {
+              return res.json();
+            }
+            return Promise.reject(res.statusText);
+          })
+          .then((article) => {
+            fillCard(article);
+          })
+          .catch(err => console.log (err));
       }
     }
   }
