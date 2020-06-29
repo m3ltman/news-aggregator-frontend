@@ -15,6 +15,7 @@ const SEARCH_BAR = document.querySelector('.search__bar');
 const SEARCH_BUTTON = document.querySelector('.search__button');
 // Селекторы блока результатов
 const RESULTS_CONTAINER = document.querySelector('.results');
+const INITIAL_ARTICLES_AMOUNT = 3;
 const CARDS_CONTAINER = document.querySelector('.cards');
 const RESULTS_SUCCESS = document.querySelector('.results__success');
 const RESULTS_ERROR = document.querySelector('.results__error');
@@ -53,6 +54,7 @@ export {
   SEARCH_BUTTON,
   CARDS_CONTAINER,
   RESULTS_CONTAINER,
+  INITIAL_ARTICLES_AMOUNT,
   PRELOADER,
   NOT_FOUND,
   RESULTS_SUCCESS,
