@@ -1,0 +1,24 @@
+@import url(./__counter/saved-articles__counter.css);
+@import url(./__header/saved-articles__header.css);
+@import url(./__keywords/saved-articles__keywords.css);
+
+.saved-articles {
+  padding: 50px 0;
+  margin: auto;
+  width: 85%;
+  padding-top: 40px;
+}
+
+@media (max-width:1024px) {
+  .saved-articles {
+    padding: 25px 0 35px 0;
+    width: 90%;
+  }
+}
+
+@media (max-width:420px) {
+  .saved-articles {
+    padding: 0;
+    margin: 0 auto 30px;
+  }
+}

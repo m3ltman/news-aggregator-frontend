@@ -1,0 +1,10 @@
+.news-card__content-wrapper {
+  width: 90%;
+  margin: 20px auto 0;
+}
+
+@media (max-width:1024px) {
+  .news-card__content-wrapper {
+    margin: 10px auto;
+  }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>news-aggregator</title>
+  <meta name="author" content="Дима Кошелев">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Сервис, который позволяет зарегистрированным пользователям получать и сохранять новости."
+  >
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.news.css %>">
+  <link rel="icon" href="../<%=require('../../images/favicon.png')%>">
+</head>
+<body>
+  <main class="page">
+
+    <header class="header">
+      <a href="../" class="header__title">NewsExplorer</a>
+      <img class="header__show-menu-btn" src="../<%=require('../../images/header-news-mobile-menu.png')%>" alt="mobile-menu">
+    </header>
+
+    <section class="saved-articles">
+
+    </section>
+
+    <section class="saved-cards">
+      <div class="cards">
+
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p class="footer__copyright">&copy; 2020 Supersite, Powered by News API</p>
+      <nav class="footer__menu">
+        <div class="footer__menu-wrapper">
+          <a class="link footer__link" href="../" rel="noopener noreferrer">Главная</a>
+          <a class="link footer__link" href="https://praktikum.yandex.ru/" target="_blank" rel="noopener noreferrer">Яндекс.Практикум</a>
+        </div>
+        <a class="link footer__link footer__link_type_icon" href="https://github.com/m3ltman?tab=repositories" target="_blank" rel="noopener noreferrer"><img src="../<%=require('../../images/github.png')%>" alt="Github-icon"></a>
+        <a class="link footer__link footer__link_type_icon" href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><img src="../<%=require('../../images/fb.png')%>" alt="Facebook-icon"></a>
+      </nav>
+    </footer>
+  </main>
+  <script src="<%= htmlWebpackPlugin.files.chunks.news.entry %>"></script>
+</body>
+</html>

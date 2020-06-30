@@ -1,0 +1,27 @@
+@import url(./_type_icon/footer__link_type_icon.css);
+
+.footer__link {
+  margin: 0 0 0 55px;
+  color: #000;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.footer__link:last-of-type {
+  margin: 0 0 0 20px;
+}
+
+@media (max-width: 1024px) {
+  .footer__link {
+    margin: 0 0 0 35px;
+  }
+}
+
+@media (max-width: 420px) {
+  .footer__link {
+    margin: 0;
+  }
+  .footer__link:last-of-type {
+    margin: 0;
+  }
+}

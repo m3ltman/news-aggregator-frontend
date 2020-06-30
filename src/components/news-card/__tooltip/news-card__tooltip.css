@@ -1,0 +1,18 @@
+@import url(./_page_news/news-card__tooltip_page_news.css);
+
+.news-card__tooltip {
+  background: url(../../../images/main-tooltip.png) 50% no-repeat;
+  background-color: transparent;
+  border: none;
+  display: none;
+  border-radius: 10px;
+  width: 183px;
+  height: 60px;
+  margin-right: 65px;
+}
+
+@media (max-width:1024px) {
+  .news-card__tooltip {
+    display: none;
+  }
+}

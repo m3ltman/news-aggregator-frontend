@@ -1,0 +1,21 @@
+.search__button {
+  position: absolute;
+  right: 0px;
+  width: 165px;
+}
+
+@media (max-width: 1024px) {
+  .search__button {
+    width: 161px;
+    right: -10px;
+    height: 56px;
+  }
+}
+
+@media (max-width: 420px) {
+  .search__button {
+    position: unset;
+    margin-top: 20px;
+    width: 100%;
+  }
+}

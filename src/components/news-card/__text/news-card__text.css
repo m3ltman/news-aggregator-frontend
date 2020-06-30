@@ -1,0 +1,22 @@
+.news-card__text {
+  margin: 16px 0 60px;
+  max-width: 352px;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+@media (max-width:1024px) {
+  .news-card__text {
+    width: 95%;
+    margin: 10px auto 60px;
+  }
+}
+
+@media (max-width:420px) {
+  .news-card__text {
+    width: 100%
+  }
+}

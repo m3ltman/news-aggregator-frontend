@@ -1,0 +1,35 @@
+.news-card__bookmark {
+  background: url(../../../images/bookmark-inactive.png) center no-repeat;
+  background-color: transparent;
+  position: absolute;
+  border-radius: 8px;
+  border: transparent;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  top: 25px;
+  right: 25px;
+}
+
+.news-card__bookmark:hover {
+  background-image: url(../../../images/bookmark-hover.png);
+}
+
+.news-card__bookmark:hover + .news-card__tooltip_active {
+  display: block;
+  cursor: pointer;
+}
+
+.news-card__bookmark.news-card__bookmark_active {
+  background-image: url(../../../images/bookmark-marked.png);
+}
+
+@media (max-width:1024px) {
+  .news-card__bookmark {
+    top: 10px;
+    right: 10px;
+  }
+  .news-card__bookmark:hover + .news-card__tooltip_active {
+    display: none;
+  }
+}

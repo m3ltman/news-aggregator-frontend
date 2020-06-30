@@ -1,0 +1,9 @@
+@import url(./_hidden/results_hidden.css);
+@import url(./__title/results__title.css);
+@import url(./__show-button/results__show-button.css);
+@import url(./__error/results__error.css);
+@import url(./__success/results__success.css);
+
+.results {
+  background-color: #F5F6F7;
+}

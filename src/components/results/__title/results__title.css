@@ -1,0 +1,25 @@
+.results__title {
+  margin: 0;
+  padding: 80px 0 0 105px;
+  font-family: Roboto Slab;
+  align-self: flex-start;
+  font-size: 40px;
+  line-height: 46px;
+  color: #1A1B22;
+}
+
+@media (max-width:1024px) {
+  .results__title {
+    font-size: 30px;
+    line-height: 34px;
+    padding: 40px 0 0 40px;
+  }
+}
+
+@media (max-width:420px) {
+  .results__title {
+    padding: 32px 0 0;
+    margin: auto;
+    width: 90%;
+  }
+}

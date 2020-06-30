@@ -1,0 +1,16 @@
+@import url(../../../vendor/fonts.css);
+@import url(../../components/page/page.css);
+@import url(../../components/button/button.css);
+@import url(../../components/header/header.css);
+@import url(../../components/link/link.css);
+@import url(../../components/saved-articles/saved-articles.css);
+@import url(../../components/cards/cards.css);
+@import url(../../components/news-card/news-card.css);
+@import url(../../components/footer/footer.css);
+@import url(../../components/saved-cards/saved-cards.css);
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
